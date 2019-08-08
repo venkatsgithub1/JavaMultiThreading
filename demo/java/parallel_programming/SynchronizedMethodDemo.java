@@ -15,7 +15,7 @@ class ShopperForSyncExampleClass extends Thread {
     the locks on objects differ, because they are two separate objects and hence
     we face data race again.
      */
-    public static synchronized void addGarlic() {
+    private static synchronized void addGarlic() {
         garlicCount++;
     }
 
