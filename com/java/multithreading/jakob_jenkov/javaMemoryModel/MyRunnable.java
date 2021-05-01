@@ -12,6 +12,9 @@ public class MyRunnable implements Runnable {
                 this.count++;
             }
         }
+        // count for one thread maybe incorrect, because one thread finishes count faster, but
+        // at the same time, second thread might be executing, the incremented value
+        // at the time appears in print
         System.out.println(Thread.currentThread().getName() + " count:" + this.count);
     }
 }
